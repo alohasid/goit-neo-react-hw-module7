@@ -2,7 +2,7 @@ import ContactsForm from "./components/ContactsForm/ContactsForm.jsx";
 import SearchBox from "./components/SearchBox/SearchBox.jsx";
 import ContactList from "./components/ContactList/ContactList.jsx";
 import {useDispatch} from "react-redux";
-import {fetchContacts} from "./contactsOps.js";
+import {fetchContacts} from "./redux/contactsOps.js";
 import {useEffect} from "react";
 
 export default function App() {

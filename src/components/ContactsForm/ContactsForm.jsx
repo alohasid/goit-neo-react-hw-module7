@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import {addContact} from "../../contactsOps.js";
+import { addContact } from '../../redux/contactsOps.js';
 
 export default function ContactsForm() {
     const dispatch = useDispatch();
@@ -8,8 +8,8 @@ export default function ContactsForm() {
         e.preventDefault();
         const form = e.target;
         const name = form.elements.name.value;
-        const number = form.elements.number.value;
-        dispatch(addContact()); // Use "phone" to match backend field
+        const phone = form.elements.number.value; // Change "number" to "phone"
+        dispatch(addContact({ name, phone })); // Match backend field names
         form.reset();
     };
 
